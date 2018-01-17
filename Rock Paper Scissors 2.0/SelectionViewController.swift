@@ -8,24 +8,39 @@
 
 import UIKit
 
+
+
+// MARK: Declare constants
+let TAG_TO_MOVE_DICT: [Int:String] = [0: "rock", 1: "paper", 2: "scissors"]
+
+
+
+// MARK: Global functions
+func generateRandomMove() -> Int {
+    return Int(arc4random() % 3)
+}
+
+
+
 class SelectionViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    // MARK: Class variables
+    var playerMove: String?
+    
+    
+    
+    // MARK: Navigation
     @IBAction func makeMove(_ sender: Any) {
+        let tag = (sender as! UIButton).tag
+        self.playerMove = TAG_TO_MOVE_DICT[tag]
         performSegue(withIdentifier: "ShowResultSegue", sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let destinationVC = segue.destination as? ResultsViewController {
+            destinationVC.playerMove = self.playerMove
+            destinationVC.cpuMove = TAG_TO_MOVE_DICT[generateRandomMove()]
+        }
     }
     
 }

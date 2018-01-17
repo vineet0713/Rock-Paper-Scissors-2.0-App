@@ -137,6 +137,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UDR-S1-Zku"/>
                     </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="dtY-yE-Vvv" id="tgh-jR-nCx"/>
+                        <outlet property="resultLabel" destination="DPq-mK-abI" id="jbU-Mh-9Pm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9S-g2-ajf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +200,6 @@
         <image name="scissors" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ifD-nt-l2q"/>
+        <segue reference="fqI-ZA-H1p"/>
     </inferredMetricsTieBreakers>
 </document>

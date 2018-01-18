@@ -26,20 +26,30 @@ class SelectionViewController: UIViewController {
     
     // MARK: Class variables
     var playerMove: String?
+    var cpuMove: String?
+    var matches: [RPSMatch] = []
     
     
     
     // MARK: Navigation
     @IBAction func makeMove(_ sender: Any) {
-        let tag = (sender as! UIButton).tag
-        self.playerMove = TAG_TO_MOVE_DICT[tag]
+        self.playerMove = TAG_TO_MOVE_DICT[(sender as! UIButton).tag]
+        self.cpuMove = TAG_TO_MOVE_DICT[generateRandomMove()]
+        self.matches.append(RPSMatch(playerMove: self.playerMove!, cpuMove: self.cpuMove!))
+        
         performSegue(withIdentifier: "ShowResultSegue", sender: sender)
+    }
+    
+    @IBAction func showHistory(_ sender: Any) {
+        performSegue(withIdentifier: "ShowHistorySegue", sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? ResultsViewController {
             destinationVC.playerMove = self.playerMove
-            destinationVC.cpuMove = TAG_TO_MOVE_DICT[generateRandomMove()]
+            destinationVC.cpuMove = self.cpuMove
+        } else if let destinationVC = segue.destination as? HistoryViewController {
+            destinationVC.matches = self.matches
         }
     }
     

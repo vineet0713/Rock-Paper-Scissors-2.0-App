@@ -16,6 +16,8 @@
 		65D16256200FFF3E001BCE15 /* Rock_Paper_Scissors_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D16255200FFF3E001BCE15 /* Rock_Paper_Scissors_2_0UITests.swift */; };
 		65D16264201001D4001BCE15 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D16263201001D4001BCE15 /* ResultsViewController.swift */; };
 		65D1626820100490001BCE15 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1626720100490001BCE15 /* HistoryViewController.swift */; };
+		65D1626A201017D4001BCE15 /* RPSMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D16269201017D4001BCE15 /* RPSMatch.swift */; };
+		65D1626C20101A56001BCE15 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1626B20101A56001BCE15 /* MatchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		65D16257200FFF3E001BCE15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D16263201001D4001BCE15 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		65D1626720100490001BCE15 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		65D16269201017D4001BCE15 /* RPSMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMatch.swift; sourceTree = "<group>"; };
+		65D1626B20101A56001BCE15 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				65D16237200FFF3E001BCE15 /* SelectionViewController.swift */,
 				65D16263201001D4001BCE15 /* ResultsViewController.swift */,
 				65D1626720100490001BCE15 /* HistoryViewController.swift */,
+				65D1626B20101A56001BCE15 /* MatchTableViewCell.swift */,
+				65D16269201017D4001BCE15 /* RPSMatch.swift */,
 				65D16239200FFF3E001BCE15 /* Main.storyboard */,
 				65D1623C200FFF3E001BCE15 /* Assets.xcassets */,
 				65D1623E200FFF3E001BCE15 /* LaunchScreen.storyboard */,
@@ -266,9 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D16238200FFF3E001BCE15 /* SelectionViewController.swift in Sources */,
+				65D1626C20101A56001BCE15 /* MatchTableViewCell.swift in Sources */,
 				65D16236200FFF3E001BCE15 /* AppDelegate.swift in Sources */,
 				65D16264201001D4001BCE15 /* ResultsViewController.swift in Sources */,
 				65D1626820100490001BCE15 /* HistoryViewController.swift in Sources */,
+				65D1626A201017D4001BCE15 /* RPSMatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

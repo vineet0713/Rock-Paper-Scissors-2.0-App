@@ -28,9 +28,11 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     
+    
     // MARK: Class variables
     var playerMove: String?
     var cpuMove: String?
+    
     
     
     
@@ -53,5 +55,5 @@ class ResultsViewController: UIViewController {
     @IBAction func playAgain(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
 }
